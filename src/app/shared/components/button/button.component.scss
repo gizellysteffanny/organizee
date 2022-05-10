@@ -1,0 +1,49 @@
+@import "../../assets/sass/colors";
+
+button.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 1rem;
+  min-height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: calc(16px * 1.5);
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  cursor: pointer;
+
+  &.cta {
+    background-color: $color-primary;
+    color: $white;
+    min-height: 48px;
+    min-width: 256px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-primary, 8);
+    }
+  }
+
+  &.loading {
+    .text {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+button.button[disabled] {
+  background-color: $bg-color-btn-disabled;
+  color: $text-color-btn-disabled;
+  cursor: not-allowed;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $bg-color-btn-disabled;
+    color: $text-color-btn-disabled;
+  }
+}

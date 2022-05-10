@@ -1,0 +1,7 @@
+<button class="button {{ className }}"
+  [class.loading]="loading"
+  [disabled]="disabled"
+>
+  <span class="text">{{ text }}</span>
+  <app-loader *ngIf="loading" [parentDisabled]="disabled"></app-loader>
+</button>

@@ -1,0 +1,25 @@
+@import "../../assets/sass/colors";
+
+.spinner {
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 3px solid lighten($color-primary, 24);
+	border-left-color: $white;
+	border-radius: 100%;
+	animation: spin 1.4s linear infinite;
+
+  &.dark {
+    border-left-color: $color-primary;
+  }
+
+  &.spinner-disabled {
+    border: 3px solid darken($bg-color-btn-disabled, 8);
+	  border-left-color: $text-color-btn-disabled;
+  }
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
